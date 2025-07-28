@@ -15,7 +15,7 @@
 <a href="https://linkedin.com/in/kenneth-ajit-askk2326" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kenneth-ajit-askk2326" height="30" width="40" /></a>
 <a href="https://instagram.com/@kenneth_philip_ajit" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="@kenneth_philip_ajit" height="30" width="40" /></a>
 <a href="https://www.hackerrank.com/@kennethphilipaj1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="@kennethphilipaj1" height="30" width="40" /></a>
-<a href="https://leetcode.com/u/9MVb8882VU/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="kenneth ajit" height="30" width="40" /></a>
+<a href="https://leetcode.com/u/KenBoi2612/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="kenneth ajit" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
