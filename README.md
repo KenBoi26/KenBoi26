@@ -34,7 +34,7 @@
 <h3 align="center">🛠️ Languages and Tools</h3>
 <p align="center">
   <a href="https://skillicons.dev" target="_blank">
-    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,js,html,css,mysql,postgres,git,linux,firebase,arduino" alt="My Skills" />
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,py,js,html,css,mysql,git,linux,firebase,arduino" alt="My Skills" />
   </a>
 </p>
 
@@ -42,8 +42,10 @@
 
 <h3 align="center">📊 GitHub Stats</h3>
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kenboi26&show_icons=true&locale=en" alt="GitHub Stats" height="192px"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=kenboi26&show_icons=true&locale=en&layout=compact" alt="Top Languages" height="192px"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=KenBoi26&theme=default" alt="GitHub Stats" height="165px" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=KenBoi26&theme=default" alt="Top Languages" height="165px" />
+  
   <br><br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kenboi26" alt="GitHub Streak" />
+  
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=KenBoi26" alt="GitHub Streak" />
 </div>
