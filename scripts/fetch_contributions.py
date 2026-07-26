@@ -9,33 +9,63 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent))
 import config
 
+def compute_streaks_and_totals(days):
+    """Computes total contributions, current streak, max streak, and best day after sorting by date."""
+    days.sort(key=lambda d: d["date"])
+
+    total = 0
+    max_streak = 0
+    temp_streak = 0
+    best_day_count = 0
+    best_day_date = ""
+
+    for d in days:
+        cnt = d["count"]
+        total += cnt
+
+        if cnt > 0:
+            temp_streak += 1
+            if temp_streak > max_streak:
+                max_streak = temp_streak
+        else:
+            temp_streak = 0
+
+        if cnt > best_day_count:
+            best_day_count = cnt
+            best_day_date = d["date"]
+
+    # Calculate current streak backwards from latest day
+    current_streak = 0
+    idx = len(days) - 1
+
+    # If today has 0 commits so far, don't break the active streak from yesterday
+    if idx >= 0 and days[idx]["count"] == 0:
+        idx -= 1
+
+    while idx >= 0 and days[idx]["count"] > 0:
+        current_streak += 1
+        idx -= 1
+
+    return total, current_streak, max_streak, best_day_date, best_day_count
+
 def generate_fallback_contributions():
     """Generates realistic fallback contribution data if network request is unavailable."""
     print("[fetch_contributions] Generating realistic fallback contribution data...")
     today = datetime.now().date()
-    # 53 weeks * 7 days = 371 days
     start_date = today - timedelta(days=370)
 
     days = []
     import random
-    random.seed(42)  # Deterministic seed for aesthetic consistency
-
-    current_streak = 0
-    max_streak = 0
-    best_day_count = 0
-    best_day_date = ""
-    total = 0
+    random.seed(42)
 
     cur_d = start_date
     while cur_d <= today:
-        # Give higher probability of contributions on weekdays
         weekday = cur_d.weekday()
         if weekday < 5:
             count = random.choices([0, 1, 3, 5, 8, 12], weights=[0.2, 0.3, 0.25, 0.15, 0.07, 0.03])[0]
         else:
             count = random.choices([0, 1, 2, 4], weights=[0.5, 0.3, 0.15, 0.05])[0]
 
-        # Calculate level 0..5
         if count == 0:
             level = 0
         elif count <= 2:
@@ -50,25 +80,10 @@ def generate_fallback_contributions():
             level = 5
 
         date_str = cur_d.strftime("%Y-%m-%d")
-        days.append({
-            "date": date_str,
-            "count": count,
-            "level": level
-        })
-
-        total += count
-        if count > 0:
-            current_streak += 1
-            if current_streak > max_streak:
-                max_streak = current_streak
-        else:
-            current_streak = 0
-
-        if count > best_day_count:
-            best_day_count = count
-            best_day_date = date_str
-
+        days.append({"date": date_str, "count": count, "level": level})
         cur_d += timedelta(days=1)
+
+    total, current_streak, max_streak, best_day_date, best_day_count = compute_streaks_and_totals(days)
 
     return {
         "username": config.USERNAME,
@@ -102,13 +117,7 @@ def fetch_github_contributions(username: str):
             return generate_fallback_contributions()
 
         days = []
-        total = 0
-        current_streak = 0
-        max_streak = 0
-        best_day_count = 0
-        best_day_date = ""
 
-        # Map tooltips if present
         tooltips = {}
         for tt in soup.find_all("tool-tip"):
             for_id = tt.get("for")
@@ -123,7 +132,6 @@ def fetch_github_contributions(username: str):
             level_str = elem.get("data-level", "0")
             level = int(level_str) if level_str.isdigit() else 0
 
-            # Count parsing from tooltip or ID
             elem_id = elem.get("id", "")
             tooltip_txt = tooltips.get(elem_id, "")
 
@@ -138,7 +146,7 @@ def fetch_github_contributions(username: str):
                     count = int(match.group(1))
 
             if count == 0 and level > 0:
-                count = level * 2  # Estimate if count not explicitly in tooltip
+                count = level * 2
 
             days.append({
                 "date": date_str,
@@ -146,23 +154,10 @@ def fetch_github_contributions(username: str):
                 "level": min(level, 5)
             })
 
-            total += count
-            if count > 0:
-                current_streak += 1
-                if current_streak > max_streak:
-                    max_streak = current_streak
-            else:
-                current_streak = 0
-
-            if count > best_day_count:
-                best_day_count = count
-                best_day_date = date_str
-
         if not days:
             return generate_fallback_contributions()
 
-        # Sort days by date
-        days.sort(key=lambda d: d["date"])
+        total, current_streak, max_streak, best_day_date, best_day_count = compute_streaks_and_totals(days)
 
         return {
             "username": username,
@@ -182,7 +177,7 @@ def main():
     data = fetch_github_contributions(config.USERNAME)
     out_path = config.CONTRIBUTIONS_JSON_PATH
     out_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
-    print(f"[fetch_contributions] Saved contributions data to {out_path} ({len(data['days'])} days, {data['total_contributions']} total)")
+    print(f"[fetch_contributions] Saved contributions data to {out_path} ({len(data['days'])} days, {data['total_contributions']} total, streak {data['current_streak']} days)")
 
 if __name__ == "__main__":
     main()
