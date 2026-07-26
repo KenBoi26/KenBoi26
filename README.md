@@ -1,5 +1,11 @@
 <div align="center">
 
+<a href="https://github.com/KenBoi26" target="_blank">
+  <img src="./portfolio-banner.svg" width="860" alt="Kenneth's Creative Universe | Explore Portfolio" />
+</a>
+
+<br><br>
+
 <h3><code>kenneth@github ~ $ ./contributions.sh</code></h3>
 <img src="./heatmap.svg" width="860" alt="GitHub Contributions Heatmap" />
 
