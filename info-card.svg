@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 674" width="490" height="674">
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap");
+      
+      @keyframes fadeInSlide {
+        0% { opacity: 0; transform: translateY(8px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .anim-line {
+        animation: fadeInSlide 0.5s ease-out forwards;
+        opacity: 0;
+      }
+    
+      .card-bg { fill: #0d1117; rx: 8px; ry: 8px; stroke: #30363d; stroke-width: 1.5; }
+      .title-bar { fill: #161b22; }
+      .dot-red { fill: #ff5f56; }
+      .dot-yellow { fill: #ffbd2e; }
+      .dot-green { fill: #27c93f; }
+      .header-title { font-family: "Fira Code", monospace; font-size: 11px; fill: #7d8590; font-weight: 600; }
+      .user-host { font-family: "Fira Code", monospace; font-size: 14px; font-weight: 700; fill: #58a6ff; }
+      .sep-line { font-family: "Fira Code", monospace; font-size: 12px; fill: #30363d; }
+      .label { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600; fill: #8b949e; }
+      .val-text { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 400; }
+      .palette-box { width: 14px; height: 14px; rx: 3px; ry: 3px; }
+    </style>
+  </defs>
+  <rect width="490" height="674" class="card-bg"/>
+  <path d="M 0 8 Q 0 0 8 0 L 482 0 Q 490 0 490 8 L 490 28 L 0 28 Z" class="title-bar"/>
+  <line x1="0" y1="28" x2="490" y2="28" stroke="#30363d" stroke-width="1"/>
+  <circle cx="16" cy="14" r="4.5" class="dot-red"/>
+  <circle cx="29" cy="14" r="4.5" class="dot-yellow"/>
+  <circle cx="42" cy="14" r="4.5" class="dot-green"/>
+  <text x="245.0" y="17" text-anchor="middle" class="header-title">neofetch --card</text>
+  <g transform="translate(25, 45)">
+    <g class="anim-line" style="animation-delay: 0.10s;">      <text x="0" y="20" class="user-host">kenneth@github</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.20s;">      <text x="0" y="36" class="sep-line">--------------------------------------------</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.28s;">      <text x="0" y="60" class="label">OS         :</text>      <text x="105" y="60" class="val-text" fill="#79c0ff">Arch Linux x86_64 / Windows</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.36s;">      <text x="0" y="88" class="label">Host       :</text>      <text x="105" y="88" class="val-text" fill="#79c0ff">Software Developer (India)</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.44s;">      <text x="0" y="116" class="label">Uptime     :</text>      <text x="105" y="116" class="val-text" fill="#7ee787">DSA &amp; Problem Solving</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.52s;">      <text x="0" y="144" class="label">Shell      :</text>      <text x="105" y="144" class="val-text" fill="#7ee787">zsh 5.9 (x86_64-pc-linux-gnu)</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.60s;">      <text x="0" y="172" class="sep-line">--------------------------------------</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.68s;">      <text x="0" y="196" class="label">Now        :</text>      <text x="105" y="196" class="val-text" fill="#ffa657">Improving DSA Concepts (C++,</text>      <text x="105" y="214" class="val-text" fill="#ffa657">Java, Py)</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.76s;">      <text x="0" y="236" class="label">Prev       :</text>      <text x="105" y="236" class="val-text" fill="#d2a8ff">Fullstack &amp; Systems Exploration</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.84s;">      <text x="0" y="264" class="label">Stack      :</text>      <text x="105" y="264" class="val-text" fill="#79c0ff">C++, Java, Python, HTML/CSS, Git</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.92s;">      <text x="0" y="292" class="label">Highlights :</text>      <text x="105" y="292" class="val-text" fill="#ff7b72">Guitarist 🎸,</text>      <text x="105" y="310" class="val-text" fill="#ff7b72">Runner 🏃‍♂️, Rubik&#x27;s Solver 🧩</text>    </g>
+    <g class="anim-line" style="animation-delay: 1.07s;" transform="translate(0, 579)">      <rect x="0" y="0" class="palette-box" fill="#161b22"/><rect x="20" y="0" class="palette-box" fill="#ff7b72"/><rect x="40" y="0" class="palette-box" fill="#7ee787"/><rect x="60" y="0" class="palette-box" fill="#ffa657"/><rect x="80" y="0" class="palette-box" fill="#79c0ff"/><rect x="100" y="0" class="palette-box" fill="#d2a8ff"/><rect x="120" y="0" class="palette-box" fill="#a5d6ff"/><rect x="140" y="0" class="palette-box" fill="#f0f6fc"/>    </g>
+  </g>
+</svg>
