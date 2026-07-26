@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://github.com/KenBoi26" target="_blank">
+<a href="https://kennyy.me" target="_blank">
   <img src="./portfolio-banner.svg" width="860" alt="Kenneth's Creative Universe | Explore Portfolio" />
 </a>
 
@@ -28,6 +28,7 @@
   🔭 I’m currently improving my <b>DSA concepts &amp; Problem Solving</b><br>
   🌱 Learning <b>C++, DSA, Java, and Python</b><br>
   📫 How to reach me: <b><a href="mailto:kennethphilipajit@gmail.com">kennethphilipajit@gmail.com</a></b><br>
+  🌐 Portfolio: <b><a href="https://kennyy.me" target="_blank">kennyy.me</a></b><br>
   ⚡ Fun fact: <b>I’m truly passionate about sports, playing the guitar, and solving Rubik’s cubes. 🎸🏃‍♂️🧩</b>
 </p>
 
@@ -69,7 +70,7 @@
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&amp;logo=leetcode&amp;logoColor=black" alt="LeetCode" />
   </a>
   &nbsp;
-  <a href="https://instagram.com" target="_blank">
+  <a href="https://www.instagram.com/kenneth_philip_ajit/?hl=en" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram" />
   </a>
 </p>
