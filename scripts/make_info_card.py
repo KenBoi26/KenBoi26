@@ -7,7 +7,7 @@ sys.path.append(str(Path(__file__).parent))
 import config
 
 def generate_info_card_svg(output_path: Path):
-    """Hand-authors a Neofetch-style SVG info card with line-by-line staggered animation."""
+    """Hand-authors a Neofetch-style SVG info card with clean layout and staggered animations."""
     is_static = os.getenv("STATIC") == "1"
 
     data = config.INFO_CARD_DATA
@@ -18,13 +18,13 @@ def generate_info_card_svg(output_path: Path):
     lines = [
         ("OS", data["os"], "#79c0ff"),
         ("Host", data["host"], "#79c0ff"),
-        ("Uptime", data["uptime"], "#7ee787"),
+        ("Focus", data["uptime"], "#7ee787"),
         ("Shell", data["shell"], "#7ee787"),
         ("---", "--------------------------------------", "#30363d"),
-        ("Now", data["now"], "#ffa657"),
-        ("Prev", data["prev"], "#d2a8ff"),
-        ("Stack", data["stack"], "#79c0ff"),
-        ("Highlights", data["highlights"], "#ff7b72"),
+        ("Learning", data["now"], "#ffa657"),
+        ("Languages", "C++, Java, Python, HTML/CSS, SQL", "#d2a8ff"),
+        ("Skills", "DSA, OOP, System Design, Git", "#79c0ff"),
+        ("Interests", data["highlights"], "#ff7b72"),
     ]
 
     # Staggered animation CSS
@@ -51,41 +51,41 @@ def generate_info_card_svg(output_path: Path):
         '      .dot-yellow { fill: #ffbd2e; }',
         '      .dot-green { fill: #27c93f; }',
         '      .header-title { font-family: "Fira Code", monospace; font-size: 11px; fill: #7d8590; font-weight: 600; }',
-        '      .user-host { font-family: "Fira Code", monospace; font-size: 14px; font-weight: 700; fill: #58a6ff; }',
+        '      .user-host { font-family: "Fira Code", monospace; font-size: 15px; font-weight: 700; fill: #58a6ff; }',
         '      .sep-line { font-family: "Fira Code", monospace; font-size: 12px; fill: #30363d; }',
         '      .label { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600; fill: #8b949e; }',
         '      .val-text { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 400; }',
-        '      .palette-box { width: 14px; height: 14px; rx: 3px; ry: 3px; }',
+        '      .palette-box { width: 16px; height: 16px; rx: 3px; ry: 3px; }',
         '    </style>',
         '  </defs>',
         f'  <rect width="{width}" height="{height}" class="card-bg"/>',
-        # Window Header
+        # Window Header Bar
         f'  <path d="M 0 8 Q 0 0 8 0 L {width-8} 0 Q {width} 0 {width} 8 L {width} 28 L 0 28 Z" class="title-bar"/>',
         f'  <line x1="0" y1="28" x2="{width}" y2="28" stroke="#30363d" stroke-width="1"/>',
         '  <circle cx="16" cy="14" r="4.5" class="dot-red"/>',
         '  <circle cx="29" cy="14" r="4.5" class="dot-yellow"/>',
         '  <circle cx="42" cy="14" r="4.5" class="dot-green"/>',
         f'  <text x="{width/2}" y="17" text-anchor="middle" class="header-title">neofetch --card</text>',
-        '  <g transform="translate(25, 45)">',
+        '  <g transform="translate(28, 42)">',
     ]
 
     # User@Host Header Row
     delay = 0.1
     svg_content.append(
         f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;">'
-        f'      <text x="0" y="20" class="user-host">{html.escape(data["title"])}</text>'
+        f'      <text x="0" y="22" class="user-host">{html.escape(data["title"])}</text>'
         f'    </g>'
     )
 
-    # Separator
+    # Separator Line
     delay += 0.1
     svg_content.append(
         f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;">'
-        f'      <text x="0" y="36" class="sep-line">--------------------------------------------</text>'
+        f'      <text x="0" y="40" class="sep-line">--------------------------------------------</text>'
         f'    </g>'
     )
 
-    y_offset = 60
+    y_offset = 68
     for key, val, color in lines:
         delay += 0.08
         if key == "---":
@@ -101,7 +101,6 @@ def generate_info_card_svg(output_path: Path):
 
             # Check for multi-line / word wrap if string is long
             if len(escaped_val) > 36:
-                # Wrap long text cleanly
                 words = escaped_val.split(", ")
                 mid = len(words) // 2
                 val_line1 = ", ".join(words[:mid]) + ","
@@ -109,31 +108,32 @@ def generate_info_card_svg(output_path: Path):
 
                 svg_content.append(
                     f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;">'
-                    f'      <text x="0" y="{y_offset}" class="label">{escaped_key:<11}:</text>'
-                    f'      <text x="105" y="{y_offset}" class="val-text" fill="{color}">{val_line1}</text>'
-                    f'      <text x="105" y="{y_offset + 18}" class="val-text" fill="{color}">{val_line2}</text>'
+                    f'      <text x="0" y="{y_offset}" class="label">{escaped_key:<10}:</text>'
+                    f'      <text x="100" y="{y_offset}" class="val-text" fill="{color}">{val_line1}</text>'
+                    f'      <text x="100" y="{y_offset + 18}" class="val-text" fill="{color}">{val_line2}</text>'
                     f'    </g>'
                 )
-                y_offset += 40
+                y_offset += 42
             else:
                 svg_content.append(
                     f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;">'
-                    f'      <text x="0" y="{y_offset}" class="label">{escaped_key:<11}:</text>'
-                    f'      <text x="105" y="{y_offset}" class="val-text" fill="{color}">{escaped_val}</text>'
+                    f'      <text x="0" y="{y_offset}" class="label">{escaped_key:<10}:</text>'
+                    f'      <text x="100" y="{y_offset}" class="val-text" fill="{color}">{escaped_val}</text>'
                     f'    </g>'
                 )
-                y_offset += 28
+                y_offset += 32
 
-    # Terminal Palette Blocks at bottom of card
+    # Terminal Palette Blocks placed cleanly near bottom of content box
     delay += 0.15
     palette_colors = ["#161b22", "#ff7b72", "#7ee787", "#ffa657", "#79c0ff", "#d2a8ff", "#a5d6ff", "#f0f6fc"]
     palette_svg = []
     for idx, pcolor in enumerate(palette_colors):
-        px = idx * 20
+        px = idx * 22
         palette_svg.append(f'<rect x="{px}" y="0" class="palette-box" fill="{pcolor}"/>')
 
+    palette_y = y_offset + 25
     svg_content.append(
-        f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;" transform="translate(0, {height - 95})">'
+        f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;" transform="translate(0, {palette_y})">'
         f'      {"".join(palette_svg)}'
         f'    </g>'
     )
