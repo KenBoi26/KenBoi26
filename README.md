@@ -30,7 +30,7 @@
 <h3 align="center">📊 GitHub Statistics &amp; Activity</h3>
 
 <p align="center">
-  <img src="./github-stats.svg" width="860" alt="GitHub Statistics &amp; Stack Breakdown" />
+  <img src="./stats-card.svg" width="860" alt="GitHub Statistics &amp; Stack Breakdown" />
 </p>
 
 <p align="center">

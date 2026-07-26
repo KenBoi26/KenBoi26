@@ -16,10 +16,9 @@ def generate_stats_svg(json_path: Path, output_path: Path):
 
     # Extract metrics
     annual_contribs = data.get("total_contributions", 936)
-    # Always display all-time / max total
     total_contribs = max(annual_contribs, 1558)
 
-    c_streak = data.get("current_streak", 34)
+    c_streak = data.get("current_streak", 35)
     l_streak = data.get("longest_streak", 35)
     active_streak = max(c_streak, l_streak, 35)
 
@@ -108,4 +107,4 @@ def generate_stats_svg(json_path: Path, output_path: Path):
     print(f"[render_stats_card] Generated local {output_path} ({width}x{height}px)")
 
 if __name__ == "__main__":
-    generate_stats_svg(config.CONTRIBUTIONS_JSON_PATH, config.BASE_DIR / "github-stats.svg")
+    generate_stats_svg(config.CONTRIBUTIONS_JSON_PATH, config.BASE_DIR / "stats-card.svg")
