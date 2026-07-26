@@ -27,18 +27,14 @@
 
 <br>
 
-<h3 align="center">📊 GitHub Statistics &amp; Streaks</h3>
+<h3 align="center">📊 GitHub Statistics &amp; Activity</h3>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=KenBoi26&amp;theme=dark&amp;hide_border=true&amp;border_radius=8" alt="GitHub Streak Stats" height="175" />
-  &nbsp;
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=KenBoi26&amp;theme=github_dark" alt="GitHub Profile Summary" height="175" />
+  <img src="./github-stats.svg" width="860" alt="GitHub Statistics &amp; Stack Breakdown" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=KenBoi26&amp;theme=github_dark" alt="Most Committed Languages" height="175" />
-  &nbsp;
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=KenBoi26&amp;theme=github_dark" alt="GitHub Overall Stats" height="175" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=KenBoi26&amp;theme=dark&amp;hide_border=true&amp;border_radius=8" alt="GitHub Streak Stats" height="175" />
 </p>
 
 <br>
