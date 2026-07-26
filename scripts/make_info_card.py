@@ -27,11 +27,11 @@ def generate_info_card_svg(output_path: Path):
         ("Interests", data["highlights"], "#ff7b72"),
     ]
 
-    # Staggered animation CSS
+    # Staggered animation CSS - opacity only or relative Y offset
     anim_css = """
       @keyframes fadeInSlide {
         0% { opacity: 0; transform: translateY(8px); }
-        100% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 1; transform: translateY(0px); }
       }
       .anim-line {
         animation: fadeInSlide 0.5s ease-out forwards;
@@ -123,7 +123,7 @@ def generate_info_card_svg(output_path: Path):
                 )
                 y_offset += 32
 
-    # Terminal Palette Blocks placed cleanly near bottom of content box
+    # Terminal Palette Blocks wrapped in outer transform <g> so CSS transform does NOT overwrite SVG translate!
     delay += 0.15
     palette_colors = ["#161b22", "#ff7b72", "#7ee787", "#ffa657", "#79c0ff", "#d2a8ff", "#a5d6ff", "#f0f6fc"]
     palette_svg = []
@@ -133,8 +133,10 @@ def generate_info_card_svg(output_path: Path):
 
     palette_y = y_offset + 25
     svg_content.append(
-        f'    <g class="anim-line" style="animation-delay: {delay:.2f}s;" transform="translate(0, {palette_y})">'
-        f'      {"".join(palette_svg)}'
+        f'    <g transform="translate(0, {palette_y})">'
+        f'      <g class="anim-line" style="animation-delay: {delay:.2f}s;">'
+        f'        {"".join(palette_svg)}'
+        f'      </g>'
         f'    </g>'
     )
 

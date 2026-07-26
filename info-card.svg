@@ -5,7 +5,7 @@
       
       @keyframes fadeInSlide {
         0% { opacity: 0; transform: translateY(8px); }
-        100% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 1; transform: translateY(0px); }
       }
       .anim-line {
         animation: fadeInSlide 0.5s ease-out forwards;
@@ -44,6 +44,6 @@
     <g class="anim-line" style="animation-delay: 0.76s;">      <text x="0" y="262" class="label">Languages :</text>      <text x="100" y="262" class="val-text" fill="#d2a8ff">C++, Java, Python, HTML/CSS, SQL</text>    </g>
     <g class="anim-line" style="animation-delay: 0.84s;">      <text x="0" y="294" class="label">Skills    :</text>      <text x="100" y="294" class="val-text" fill="#79c0ff">DSA, OOP, System Design, Git</text>    </g>
     <g class="anim-line" style="animation-delay: 0.92s;">      <text x="0" y="326" class="label">Interests :</text>      <text x="100" y="326" class="val-text" fill="#ff7b72">Guitarist 🎸,</text>      <text x="100" y="344" class="val-text" fill="#ff7b72">Runner 🏃‍♂️, Rubik&#x27;s Solver 🧩</text>    </g>
-    <g class="anim-line" style="animation-delay: 1.07s;" transform="translate(0, 393)">      <rect x="0" y="0" class="palette-box" fill="#161b22"/><rect x="22" y="0" class="palette-box" fill="#ff7b72"/><rect x="44" y="0" class="palette-box" fill="#7ee787"/><rect x="66" y="0" class="palette-box" fill="#ffa657"/><rect x="88" y="0" class="palette-box" fill="#79c0ff"/><rect x="110" y="0" class="palette-box" fill="#d2a8ff"/><rect x="132" y="0" class="palette-box" fill="#a5d6ff"/><rect x="154" y="0" class="palette-box" fill="#f0f6fc"/>    </g>
+    <g transform="translate(0, 393)">      <g class="anim-line" style="animation-delay: 1.07s;">        <rect x="0" y="0" class="palette-box" fill="#161b22"/><rect x="22" y="0" class="palette-box" fill="#ff7b72"/><rect x="44" y="0" class="palette-box" fill="#7ee787"/><rect x="66" y="0" class="palette-box" fill="#ffa657"/><rect x="88" y="0" class="palette-box" fill="#79c0ff"/><rect x="110" y="0" class="palette-box" fill="#d2a8ff"/><rect x="132" y="0" class="palette-box" fill="#a5d6ff"/><rect x="154" y="0" class="palette-box" fill="#f0f6fc"/>      </g>    </g>
   </g>
 </svg>
