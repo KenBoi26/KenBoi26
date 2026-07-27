@@ -1,22 +1,9 @@
 <div align="center">
 
-<!-- HERO PORTFOLIO SECTION -->
+<!-- HERO PORTFOLIO BANNER -->
 <a href="https://kennyy.me" target="_blank">
   <img src="./portfolio-banner.svg" width="100%" alt="Kenneth Philip Ajit | Portfolio - I Engineer Logic Into Systems That Think." />
 </a>
-
-<br><br>
-
-<!-- PORTFOLIO DIRECTORY / QUICK NAV -->
-<table width="100%">
-  <tr>
-    <td align="center" width="20%"><b><a href="https://kennyy.me/#about">⚡ ABOUT</a></b></td>
-    <td align="center" width="20%"><b><a href="https://kennyy.me/#projects">💻 PROJECTS</a></b></td>
-    <td align="center" width="20%"><b><a href="https://kennyy.me/#timeline">⏳ TIMELINE</a></b></td>
-    <td align="center" width="20%"><b><a href="https://kennyy.me/#certificates">🏆 CERTIFICATES</a></b></td>
-    <td align="center" width="20%"><b><a href="https://kennyy.me/#contact">📬 CONTACT</a></b></td>
-  </tr>
-</table>
 
 <br><br>
 
@@ -39,7 +26,7 @@
 <h3 align="center">A passionate Software Developer from India 🇮🇳</h3>
 
 <p align="center">
-  🔭 I’m currently building high-performance applications &amp; mastering <b>DSA &amp; Machine Learning</b><br>
+   crystalline logic &amp; high-performance applications • <b>DSA &amp; Machine Learning</b><br>
   🌱 Learning <b>C++, Java, Python, Systems Architecture, and Deep Learning</b><br>
   📫 How to reach me: <b><a href="mailto:kennethphilipajit@gmail.com">kennethphilipajit@gmail.com</a></b><br>
   🌐 Portfolio: <b><a href="https://kennyy.me" target="_blank">kennyy.me</a></b><br>
