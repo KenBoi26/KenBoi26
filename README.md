@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO PORTFOLIO BANNER -->
-<a href="https://kennyy.me" target="_blank">
+<a href="https://kennyy.me" target="_blank" rel="noopener noreferrer">
   <img src="./portfolio-banner.svg" width="100%" alt="Kenneth Philip Ajit | Portfolio - I Engineer Logic Into Systems That Think." />
 </a>
 
@@ -26,10 +26,10 @@
 <h3 align="center">A passionate Software Developer from India 🇮🇳</h3>
 
 <p align="center">
-   crystalline logic &amp; high-performance applications • <b>DSA &amp; Machine Learning</b><br>
+  🔭 Building high-performance applications • <b>DSA &amp; Machine Learning</b><br>
   🌱 Learning <b>C++, Java, Python, Systems Architecture, and Deep Learning</b><br>
   📫 How to reach me: <b><a href="mailto:kennethphilipajit@gmail.com">kennethphilipajit@gmail.com</a></b><br>
-  🌐 Portfolio: <b><a href="https://kennyy.me" target="_blank">kennyy.me</a></b><br>
+  🌐 Portfolio: <b><a href="https://kennyy.me" target="_blank" rel="noopener noreferrer">kennyy.me</a></b><br>
   ⚡ Fun fact: <b>I’m truly passionate about sports, playing the guitar 🎸, running 🏃‍♂️, and solving Rubik’s cubes 🧩</b>
 </p>
 
@@ -87,15 +87,15 @@
 
 <h3 align="center">🔗 Connect with me</h3>
 <p align="center">
-  <a href="https://linkedin.com/in/kenneth-ajit-askk2326" target="_blank">
+  <a href="https://linkedin.com/in/kenneth-ajit-askk2326" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
-  <a href="https://leetcode.com/u/KenBoi26" target="_blank">
+  <a href="https://leetcode.com/u/KenBoi26" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&amp;logo=leetcode&amp;logoColor=black" alt="LeetCode" />
   </a>
   &nbsp;
-  <a href="https://www.instagram.com/kenneth_philip_ajit/?hl=en" target="_blank">
+  <a href="https://www.instagram.com/kenneth_philip_ajit/?hl=en" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white" alt="Instagram" />
   </a>
 </p>
