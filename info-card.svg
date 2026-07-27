@@ -12,22 +12,22 @@
         opacity: 0;
       }
     
-      .card-bg { fill: #0d1117; rx: 8px; ry: 8px; stroke: #30363d; stroke-width: 1.5; }
-      .title-bar { fill: #161b22; }
+      .card-bg { fill: #0B0C0E; rx: 12px; ry: 12px; stroke: #232730; stroke-width: 1.5; }
+      .title-bar { fill: #14161C; }
       .dot-red { fill: #ff5f56; }
-      .dot-yellow { fill: #ffbd2e; }
+      .dot-yellow { fill: #FACC15; }
       .dot-green { fill: #27c93f; }
-      .header-title { font-family: "Fira Code", monospace; font-size: 11px; fill: #7d8590; font-weight: 600; }
-      .user-host { font-family: "Fira Code", monospace; font-size: 15px; font-weight: 700; fill: #58a6ff; }
-      .sep-line { font-family: "Fira Code", monospace; font-size: 12px; fill: #30363d; }
-      .label { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600; fill: #8b949e; }
-      .val-text { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 400; }
+      .header-title { font-family: "Fira Code", monospace; font-size: 11px; fill: #8E9BAE; font-weight: 600; }
+      .user-host { font-family: "Fira Code", monospace; font-size: 15px; font-weight: 700; fill: #FACC15; }
+      .sep-line { font-family: "Fira Code", monospace; font-size: 12px; fill: #232730; }
+      .label { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 600; fill: #8E9BAE; }
+      .val-text { font-family: "Fira Code", monospace; font-size: 12px; font-weight: 400; fill: #FFFFFF; }
       .palette-box { width: 16px; height: 16px; rx: 3px; ry: 3px; }
     </style>
   </defs>
   <rect width="490" height="674" class="card-bg"/>
-  <path d="M 0 8 Q 0 0 8 0 L 482 0 Q 490 0 490 8 L 490 28 L 0 28 Z" class="title-bar"/>
-  <line x1="0" y1="28" x2="490" y2="28" stroke="#30363d" stroke-width="1"/>
+  <path d="M 0 12 Q 0 0 12 0 L 478 0 Q 490 0 490 12 L 490 28 L 0 28 Z" class="title-bar"/>
+  <line x1="0" y1="28" x2="490" y2="28" stroke="#232730" stroke-width="1"/>
   <circle cx="16" cy="14" r="4.5" class="dot-red"/>
   <circle cx="29" cy="14" r="4.5" class="dot-yellow"/>
   <circle cx="42" cy="14" r="4.5" class="dot-green"/>
@@ -35,15 +35,15 @@
   <g transform="translate(28, 42)">
     <g class="anim-line" style="animation-delay: 0.10s;">      <text x="0" y="22" class="user-host">kenneth@github</text>    </g>
     <g class="anim-line" style="animation-delay: 0.20s;">      <text x="0" y="40" class="sep-line">--------------------------------------------</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.28s;">      <text x="0" y="68" class="label">OS        :</text>      <text x="100" y="68" class="val-text" fill="#79c0ff">Arch Linux x86_64 / Windows</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.36s;">      <text x="0" y="100" class="label">Host      :</text>      <text x="100" y="100" class="val-text" fill="#79c0ff">Software Developer (India)</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.44s;">      <text x="0" y="132" class="label">Focus     :</text>      <text x="100" y="132" class="val-text" fill="#7ee787">DSA &amp; Problem Solving</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.52s;">      <text x="0" y="164" class="label">Shell     :</text>      <text x="100" y="164" class="val-text" fill="#7ee787">zsh 5.9 (x86_64-pc-linux-gnu)</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.28s;">      <text x="0" y="68" class="label">OS        :</text>      <text x="100" y="68" class="val-text">Arch Linux x86_64 / Windows</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.36s;">      <text x="0" y="100" class="label">Host      :</text>      <text x="100" y="100" class="val-text">Software Developer (India)</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.44s;">      <text x="0" y="132" class="label">Focus     :</text>      <text x="100" y="132" class="val-text" fill="#FACC15">DSA &amp; Machine Learning</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.52s;">      <text x="0" y="164" class="label">Shell     :</text>      <text x="100" y="164" class="val-text">zsh 5.9 (x86_64-pc-linux-gnu)</text>    </g>
     <g class="anim-line" style="animation-delay: 0.60s;">      <text x="0" y="196" class="sep-line">--------------------------------------</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.68s;">      <text x="0" y="220" class="label">Learning  :</text>      <text x="100" y="220" class="val-text" fill="#ffa657">Improving DSA Concepts (C++,</text>      <text x="100" y="238" class="val-text" fill="#ffa657">Java, Py)</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.76s;">      <text x="0" y="262" class="label">Languages :</text>      <text x="100" y="262" class="val-text" fill="#d2a8ff">C++, Java, Python, HTML/CSS, SQL</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.84s;">      <text x="0" y="294" class="label">Skills    :</text>      <text x="100" y="294" class="val-text" fill="#79c0ff">DSA, OOP, System Design, Git</text>    </g>
-    <g class="anim-line" style="animation-delay: 0.92s;">      <text x="0" y="326" class="label">Interests :</text>      <text x="100" y="326" class="val-text" fill="#ff7b72">Guitarist 🎸,</text>      <text x="100" y="344" class="val-text" fill="#ff7b72">Runner 🏃‍♂️, Rubik&#x27;s Solver 🧩</text>    </g>
-    <g transform="translate(0, 393)">      <g class="anim-line" style="animation-delay: 1.07s;">        <rect x="0" y="0" class="palette-box" fill="#161b22"/><rect x="22" y="0" class="palette-box" fill="#ff7b72"/><rect x="44" y="0" class="palette-box" fill="#7ee787"/><rect x="66" y="0" class="palette-box" fill="#ffa657"/><rect x="88" y="0" class="palette-box" fill="#79c0ff"/><rect x="110" y="0" class="palette-box" fill="#d2a8ff"/><rect x="132" y="0" class="palette-box" fill="#a5d6ff"/><rect x="154" y="0" class="palette-box" fill="#f0f6fc"/>      </g>    </g>
+    <g class="anim-line" style="animation-delay: 0.68s;">      <text x="0" y="220" class="label">Learning  :</text>      <text x="100" y="220" class="val-text" fill="#FACC15">C++, Java, Python, AI/ML</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.76s;">      <text x="0" y="262" class="label">Languages :</text>      <text x="100" y="262" class="val-text">C++, Java, Python, HTML/CSS, SQL</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.84s;">      <text x="0" y="294" class="label">Skills    :</text>      <text x="100" y="294" class="val-text">DSA, ML, System Design, Git</text>    </g>
+    <g class="anim-line" style="animation-delay: 0.92s;">      <text x="0" y="326" class="label">Interests :</text>      <text x="100" y="326" class="val-text">Guitarist 🎸, Runner 🏃‍♂️, Rubik's 🧩</text>    </g>
+    <g transform="translate(0, 393)">      <g class="anim-line" style="animation-delay: 1.07s;">        <rect x="0" y="0" class="palette-box" fill="#0B0C0E"/><rect x="22" y="0" class="palette-box" fill="#FACC15"/><rect x="44" y="0" class="palette-box" fill="#FFFFFF"/><rect x="66" y="0" class="palette-box" fill="#8E9BAE"/><rect x="88" y="0" class="palette-box" fill="#3776AB"/><rect x="110" y="0" class="palette-box" fill="#00599C"/><rect x="132" y="0" class="palette-box" fill="#ED8B00"/><rect x="154" y="0" class="palette-box" fill="#E34F26"/>      </g>    </g>
   </g>
 </svg>

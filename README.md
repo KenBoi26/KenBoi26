@@ -1,21 +1,35 @@
 <div align="center">
 
+<!-- HERO PORTFOLIO SECTION -->
 <a href="https://kennyy.me" target="_blank">
-  <img src="./portfolio-banner.svg" width="860" alt="Kenneth's Creative Universe | Explore Portfolio" />
+  <img src="./portfolio-banner.svg" width="100%" alt="Kenneth Philip Ajit | Portfolio - I Engineer Logic Into Systems That Think." />
 </a>
 
 <br><br>
 
+<!-- PORTFOLIO DIRECTORY / QUICK NAV -->
+<table width="100%">
+  <tr>
+    <td align="center" width="20%"><b><a href="https://kennyy.me/#about">⚡ ABOUT</a></b></td>
+    <td align="center" width="20%"><b><a href="https://kennyy.me/#projects">💻 PROJECTS</a></b></td>
+    <td align="center" width="20%"><b><a href="https://kennyy.me/#timeline">⏳ TIMELINE</a></b></td>
+    <td align="center" width="20%"><b><a href="https://kennyy.me/#certificates">🏆 CERTIFICATES</a></b></td>
+    <td align="center" width="20%"><b><a href="https://kennyy.me/#contact">📬 CONTACT</a></b></td>
+  </tr>
+</table>
+
+<br><br>
+
 <h3><code>kenneth@github ~ $ ./contributions.sh</code></h3>
-<img src="./heatmap.svg" width="860" alt="GitHub Contributions Heatmap" />
+<img src="./heatmap.svg" width="100%" alt="GitHub Contributions Heatmap" />
 
 <br><br>
 
 <h3><code>kenneth@github ~ $ whoami</code></h3>
 <table>
   <tr>
-    <td valign="top"><img src="./avi-ascii.svg" width="370" alt="ASCII Portrait" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="Neofetch Info Card" /></td>
+    <td valign="top" width="45%"><img src="./avi-ascii.svg" width="100%" alt="ASCII Portrait" /></td>
+    <td valign="top" width="55%"><img src="./info-card.svg" width="100%" alt="Neofetch Info Card" /></td>
   </tr>
 </table>
 
@@ -25,19 +39,43 @@
 <h3 align="center">A passionate Software Developer from India 🇮🇳</h3>
 
 <p align="center">
-  🔭 I’m currently improving my <b>DSA concepts &amp; Problem Solving</b><br>
-  🌱 Learning <b>C++, DSA, Java, and Python</b><br>
+  🔭 I’m currently building high-performance applications &amp; mastering <b>DSA &amp; Machine Learning</b><br>
+  🌱 Learning <b>C++, Java, Python, Systems Architecture, and Deep Learning</b><br>
   📫 How to reach me: <b><a href="mailto:kennethphilipajit@gmail.com">kennethphilipajit@gmail.com</a></b><br>
   🌐 Portfolio: <b><a href="https://kennyy.me" target="_blank">kennyy.me</a></b><br>
-  ⚡ Fun fact: <b>I’m truly passionate about sports, playing the guitar, and solving Rubik’s cubes. 🎸🏃‍♂️🧩</b>
+  ⚡ Fun fact: <b>I’m truly passionate about sports, playing the guitar 🎸, running 🏃‍♂️, and solving Rubik’s cubes 🧩</b>
 </p>
+
+<br>
+
+<!-- FEATURED PORTFOLIO HIGHLIGHTS -->
+<h3 align="center">🌟 Portfolio Highlights &amp; Core Focus</h3>
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🧠 Machine Learning &amp; Logic</h4>
+      <ul>
+        <li>Engineering intelligent systems and algorithmic problem solving.</li>
+        <li>Focusing on clean logic, optimized performance, and scalable ML workflows.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>💻 Full-Stack &amp; Systems</h4>
+      <ul>
+        <li>Building modern, dynamic user interfaces and resilient backends.</li>
+        <li>Passion for Linux, low-level efficiency, and clean code architecture.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 <br>
 
 <h3 align="center">📊 GitHub Statistics &amp; Activity</h3>
 
 <p align="center">
-  <img src="./stats-card.svg" width="860" alt="GitHub Statistics &amp; Stack Breakdown" />
+  <img src="./stats-card.svg" width="100%" alt="GitHub Statistics &amp; Stack Breakdown" />
 </p>
 
 <p align="center">
