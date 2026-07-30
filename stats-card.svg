@@ -37,7 +37,7 @@
 
   <!-- Middle Column: Current & Longest Streak -->
   <g transform="translate(290, 65)">
-    <text x="0" y="32" class="stat-num-streak">38 Days 🔥</text>
+    <text x="0" y="32" class="stat-num-streak">39 Days 🔥</text>
     <text x="0" y="55" class="stat-label">Current Streak</text>
     <text x="0" y="72" class="stat-label" fill="#7d8590">Best Day: 34 contribs</text>
   </g>
