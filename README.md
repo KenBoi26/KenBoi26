@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- HERO PORTFOLIO BANNER -->
+
 <a href="https://kennyy.me" target="_blank" rel="noopener noreferrer">
   <img src="./portfolio-banner.svg" width="100%" alt="Kenneth Philip Ajit | Portfolio - I Engineer Logic Into Systems That Think." />
 </a>
