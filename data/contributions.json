@@ -1,48 +1,13 @@
 {
   "username": "KenBoi26",
-  "total_contributions": 919,
-  "current_streak": 61,
-  "longest_streak": 61,
+  "total_contributions": 899,
+  "current_streak": 62,
+  "longest_streak": 62,
   "best_day": {
     "date": "2026-02-17",
     "count": 34
   },
   "days": [
-    {
-      "date": "2025-08-17",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-18",
-      "count": 8,
-      "level": 2
-    },
-    {
-      "date": "2025-08-19",
-      "count": 8,
-      "level": 2
-    },
-    {
-      "date": "2025-08-20",
-      "count": 2,
-      "level": 1
-    },
-    {
-      "date": "2025-08-21",
-      "count": 1,
-      "level": 1
-    },
-    {
-      "date": "2025-08-22",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-08-23",
-      "count": 2,
-      "level": 1
-    },
     {
       "date": "2025-08-24",
       "count": 0,
@@ -1860,9 +1825,14 @@
     },
     {
       "date": "2026-08-22",
+      "count": 1,
+      "level": 1
+    },
+    {
+      "date": "2026-08-23",
       "count": 0,
       "level": 0
     }
   ],
-  "updated_at": "2026-08-22T06:59:34.792837+00:00"
+  "updated_at": "2026-08-23T07:01:26.789964+00:00"
 }
