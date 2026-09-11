@@ -18,11 +18,9 @@ def generate_stats_svg(json_path: Path, output_path: Path):
     annual_contribs = data.get("total_contributions", 936)
     total_contribs = max(annual_contribs, 1558)
 
-    c_streak = data.get("current_streak", 35)
-    l_streak = data.get("longest_streak", 35)
-    active_streak = max(c_streak, l_streak, 35)
-
-    best_day = data.get("best_day", {}).get("count", 34)
+    c_streak = data.get("current_streak", 0)
+    l_streak = data.get("longest_streak", 0)
+    best_day = data.get("best_day", {}).get("count", 0)
 
     width = 860
     height = 180
@@ -66,9 +64,9 @@ def generate_stats_svg(json_path: Path, output_path: Path):
 
   <!-- Middle Column: Current & Longest Streak -->
   <g transform="translate(290, 65)">
-    <text x="0" y="32" class="stat-num-streak">{active_streak} Days 🔥</text>
+    <text x="0" y="32" class="stat-num-streak">{c_streak} Days 🔥</text>
     <text x="0" y="55" class="stat-label">Current Streak</text>
-    <text x="0" y="72" class="stat-label" fill="#7d8590">Best Day: {best_day} contribs</text>
+    <text x="0" y="72" class="stat-label" fill="#7d8590">Longest: {l_streak}d • Best: {best_day}</text>
   </g>
 
   <line x1="500" y1="50" x2="500" y2="150" class="divider"/>

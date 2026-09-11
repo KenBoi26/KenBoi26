@@ -2,10 +2,16 @@ name: Update profile art
 
 "on":
   schedule:
-    - cron: "17 6 * * *"   # ~06:17 UTC daily
+    - cron: "0 */3 * * *"   # Check every 3 hours for new code pushes
   workflow_dispatch: {}
+  repository_dispatch:
+    types: [external_push]
   push:
     branches: [main]
+    paths-ignore:
+      - "heatmap.svg"
+      - "stats-card.svg"
+      - "data/**"
 
 permissions:
   contents: write
@@ -15,14 +21,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check for real user activity
+        id: check
+        run: python3 scripts/check_activity.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          GITHUB_ACTOR: ${{ github.actor }}
+
       - uses: actions/setup-python@v5
+        if: steps.check.outputs.should_update == 'true'
         with:
           python-version: "3.11"
-      - run: pip install -r scripts/requirements.txt
-      - run: python scripts/fetch_contributions.py
-      - run: python scripts/render_heatmap_svg.py
-      - run: python scripts/render_stats_card.py
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Install dependencies
+        if: steps.check.outputs.should_update == 'true'
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch contributions
+        if: steps.check.outputs.should_update == 'true'
+        run: python scripts/fetch_contributions.py
+
+      - name: Render heatmap SVG
+        if: steps.check.outputs.should_update == 'true'
+        run: python scripts/render_heatmap_svg.py
+
+      - name: Render stats card
+        if: steps.check.outputs.should_update == 'true'
+        run: python scripts/render_stats_card.py
+
+      - name: Commit and push changes
+        if: steps.check.outputs.should_update == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph and stats card [skip ci]"
           file_pattern: "data/contributions.json heatmap.svg stats-card.svg"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
